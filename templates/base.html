@@ -1,0 +1,21 @@
+<h1>Hello sreekanth this is your first one </h1>
+{%block content%}
+{%for i in data%}
+<b>Title:</b>{{i.title}}<br>
+
+<b>Image:</b>
+<img src="{{ i.image.url|default:'path/to/default/image.jpg' }}" height="200" width="200">
+<br>
+
+
+
+<b>Video:</b><video width="320" height="240" controls>
+    <source src="{{i.video.url}}" type="video/mp4">
+</video><br>
+
+<b>Description:</b>{{i.description}}<br>
+<b>Author:</b>{{i.author}}<br>
+<b>Created_at:</b>{{i.created_at}}<br>
+
+{% endfor %}
+{%endblock content%}  
